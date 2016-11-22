@@ -1,0 +1,39 @@
+{
+    "name": "appgame/cron",
+    "description": "Cron job management.",
+    "keywords": ["phwoolcon", "cronjob"],
+    "type": "library",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Christopher CHEN",
+            "email": "csm@appgame.com"
+        },
+        {
+            "name": "Goodspb",
+            "email": "luoshaohao@appgame.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.5.0",
+        "phwoolcon/phwoolcon": "~1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Appgame\\Cron\\": "src",
+            "Appgame\\Cron\\Tests\\": "tests"
+        },
+        "exclude-from-classmap": [
+            "/tests/"
+        ]
+    },
+    "bin": [
+        "phwoolcon-package/phwoolcon-package-cron.php"
+    ],
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
