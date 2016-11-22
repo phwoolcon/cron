@@ -1,0 +1,4 @@
+return [
+    'appgame/cron' => [
+    ],
+];
