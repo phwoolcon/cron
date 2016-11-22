@@ -39,11 +39,8 @@ class Cron extends Model
      */
     public function cronInitialize($cronJob)
     {
-        $this->setData($cronJob);
-        $now = date('Y-m-d H:i:s');
+        $this->addData($cronJob);
         $this->setData('status', self::STATUS_INITIALIZED);
-        $this->setData('created_at', $now);
-        $this->setData('updated_at', $now);
         $this->setData('error','0');
         $this->setData('type','0');
         $this->setData('ms','0');
@@ -56,7 +53,9 @@ class Cron extends Model
      */
     public function run()
     {
-        $this->setData('run_at', date('Y-m-d H:i:s'))->setData('status', self::STATUS_RUNNING)->save();
+        $this->setData('run_at', time())
+            ->setData('status', self::STATUS_RUNNING)
+            ->save();
         Timer::start();
         try {
             $class = $this->getData('class');
@@ -80,5 +79,16 @@ class Cron extends Model
             Log::error($e->getMessage() . "\n" . $e->getTraceAsString());
         }
         return $this;
+    }
+
+    public function save($data = null, $whiteList = null)
+    {
+        try{
+            return parent::save($data, $whiteList);
+        } catch (Exception $e) {
+            echo "Saving error. Please check log. \n";
+            Log::error($e->getMessage() . "\n" . $e->getTraceAsString());
+        }
+        return false;
     }
 }

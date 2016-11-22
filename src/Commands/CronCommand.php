@@ -31,7 +31,7 @@ class CronCommand extends Command
         restore_exception_handler();
         $this->initializedJobs = [];
         /** @var Cron[] $jobs */
-        $jobs = Cron::findSimple(['status' => 'initialized']);
+        $jobs = Cron::findSimple(['status' => Cron::STATUS_INITIALIZED]);
 
         // 已存在 cron (initialized 状态)
         if ($jobs) {
@@ -81,7 +81,7 @@ class CronCommand extends Command
             exit();
         }
         if ($this->jobs === null) {
-            $this->jobs = $list->toArray();
+            $this->jobs = $list;
         }
         return $this->jobs;
     }
