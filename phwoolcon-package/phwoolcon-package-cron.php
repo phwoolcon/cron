@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'appgame/cron' => [
+    'luckyscape/cron' => [
         'commands' => [
             99 => [
-                'cron:execute' => 'Appgame\Cron\Commands\CronCommand',
+                'cron:execute' => 'Luckyscape\Cron\Commands\CronCommand',
             ]
         ],
     ],

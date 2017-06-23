@@ -1,10 +1,10 @@
 <?php
-namespace Appgame\Cron\Commands;
+namespace Luckyscape\Cron\Commands;
 
-use Appgame\Cron\Models\Cron;
+use Luckyscape\Cron\Models\Cron;
 use Config;
 use Log;
-use Appgame\Cron\Library\TdCron;
+use Luckyscape\Cron\Library\TdCron;
 use Phwoolcon\Cli\Command;
 
 class CronCommand extends Command

@@ -1,5 +1,5 @@
 <?php
-namespace Appgame\Cron\Library;
+namespace Luckyscape\Cron\Library;
 
 class Timer
 {
