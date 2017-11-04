@@ -25,7 +25,7 @@ return [
               PRIMARY KEY (`id`),
               KEY `name` (`name`,`created_at`),
               KEY `cron_status_index` (`status`)
-            ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
         ");
     },
     'down' => function (Adapter $db, Migrate $migrate) {
