@@ -1,10 +1,10 @@
 <?php
-namespace Luckyscape\Cron\Commands;
+namespace Phwoolcon\Cron\Commands;
 
-use Luckyscape\Cron\Models\Cron;
+use Phwoolcon\Cron\Models\Cron;
 use Config;
 use Log;
-use Luckyscape\Cron\Library\TdCron;
+use Phwoolcon\Cron\Library\TdCron;
 use Phwoolcon\Cli\Command;
 
 class CronCommand extends Command

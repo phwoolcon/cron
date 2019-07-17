@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'luckyscape/cron' => [
+    'phwoolcon/cron' => [
         'commands' => [
             99 => [
-                'cron:execute' => 'Luckyscape\Cron\Commands\CronCommand',
+                'cron:execute' => 'Phwoolcon\Cron\Commands\CronCommand',
             ]
         ],
     ],

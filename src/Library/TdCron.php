@@ -1,5 +1,5 @@
 <?php
-namespace Luckyscape\Cron\Library;
+namespace Phwoolcon\Cron\Library;
 
 use Exception;
 

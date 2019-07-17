@@ -1,0 +1,11 @@
+.DS_Store
+/.idea/
+/build
+/composer.lock
+/vendor
+/tests/resource/app/config/testing/
+/tests/root/
+/composer.lock
+/ignore/
+.php_cs.cache
+tags

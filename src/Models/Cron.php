@@ -1,10 +1,10 @@
 <?php
-namespace Luckyscape\Cron\Models;
+namespace Phwoolcon\Cron\Models;
 
 use Exception;
 use Log;
 use Phwoolcon\Model;
-use Luckyscape\Cron\Library\Timer;
+use Phwoolcon\Cron\Library\Timer;
 
 class Cron extends Model
 {
